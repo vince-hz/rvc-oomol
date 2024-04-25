@@ -5,11 +5,6 @@ executor:
   name: python_executor
   entry: ./index.py
 inputs_def:
-  - handle: in
-    serialize:
-      serializer: json
-      json_schema:
-        type: string
   - handle: audioPath
     serialize:
       serializer: json

@@ -5,16 +5,6 @@ executor:
   name: python_executor
   entry: ./index.py
 inputs_def:
-  - handle: handle0
-    serialize:
-      serializer: json
-      json_schema:
-        type: string
-  - handle: in
-    serialize:
-      serializer: json
-      json_schema:
-        type: string
   - handle: url
     serialize:
       serializer: json
