@@ -1,0 +1,36 @@
+type: task_block
+title: python_lib_896fae
+icon: https://static.oomol.com/icons/python.png
+executor:
+  name: python_executor
+  entry: ./index.py
+inputs_def:
+  - handle: in
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: s1
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: s2
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: mergeDir
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+outputs_def:
+  - handle: downloadUrl
+    serialize:
+      serializer: json
+  - handle: fileName
+    serialize:
+      serializer: json
+      json_schema:
+        type: string

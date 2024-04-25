@@ -1,0 +1,35 @@
+type: task_block
+title: python_lib_212944
+icon: https://static.oomol.com/icons/python.png
+executor:
+  name: python_executor
+  entry: ./index.py
+inputs_def:
+  - handle: handle0
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: in
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: url
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+    cache:
+      initial_value: ""
+outputs_def:
+  - handle: dir
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: dirName
+    serialize:
+      serializer: json
+      json_schema:
+        type: string

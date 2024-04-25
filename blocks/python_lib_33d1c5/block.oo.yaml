@@ -1,0 +1,28 @@
+type: task_block
+title: python_lib_33d1c5
+icon: https://static.oomol.com/icons/python.png
+executor:
+  name: python_executor
+  entry: ./index.py
+inputs_def:
+  - handle: in
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: audioPath
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: dirName
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+outputs_def:
+  - handle: convertedPath
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
