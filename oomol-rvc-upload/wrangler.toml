@@ -1,0 +1,9 @@
+name = "oomol-rvc-upload"
+main = "src/worker.js"
+compatibility_date = "2024-05-07"
+workers_dev = true
+account_id = "e78ddd389add7d25b9644cbebbe5aa5a"
+
+[[r2_buckets]]
+binding = "r2"
+bucket_name = "oomol-rvc"
