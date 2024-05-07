@@ -1,5 +1,11 @@
 from gradio_client import Client, file
 
+# 人声推理。
+# 输入：
+# audioPath: 人声音频路径。
+# dirName: 用于拼接输出人声音频路径。
+# 输出：
+# convertedPath: 推理后的人声音频路径。
 def main(inputs: dict, context):
   audioPath = inputs['audioPath']
   dirName = inputs['dirName']

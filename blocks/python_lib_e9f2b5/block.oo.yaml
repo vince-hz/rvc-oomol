@@ -16,7 +16,7 @@ inputs_def:
       json_schema:
         type: string
 outputs_def:
-  - handle: audioPath
+  - handle: vocalPath
     serialize:
       serializer: json
       json_schema:

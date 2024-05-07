@@ -15,19 +15,19 @@ nodes:
   - task: ../../blocks/python_lib_e9f2b5/block.oo.yaml
     node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1
     inputs_from:
-      - handle: sourceDir
-        from_node:
-          - node_id: 294404e4-36e7-42e1-a0ce-1e7c6a7faaf6
-            output_handle: dir
       - handle: dirName
         cache:
           initial_value: ffff
         from_node:
           - node_id: 294404e4-36e7-42e1-a0ce-1e7c6a7faaf6
-            output_handle: dirName
+            output_handle: audioDirName
       - handle: in
         cache:
           initial_value: aaa
+      - handle: sourceDir
+        from_node:
+          - node_id: 294404e4-36e7-42e1-a0ce-1e7c6a7faaf6
+            output_handle: audioDirPath
     title: uvr
   - task: ../../blocks/python_lib_33d1c5/block.oo.yaml
     node_id: d1c5882b-cd0b-4333-baae-a305ccbdffd4
@@ -40,7 +40,7 @@ nodes:
           initial_value: ""
         from_node:
           - node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1
-            output_handle: audioPath
+            output_handle: vocalPath
       - handle: dirName
         from_node:
           - node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1

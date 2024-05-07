@@ -13,12 +13,12 @@ inputs_def:
     cache:
       initial_value: ""
 outputs_def:
-  - handle: dir
+  - handle: audioDirPath
     serialize:
       serializer: json
       json_schema:
         type: string
-  - handle: dirName
+  - handle: audioDirName
     serialize:
       serializer: json
       json_schema:
