@@ -1,8 +1,4 @@
 name: RVC
 container:
   scripts:
-    bootstrap: |
-      #!/bin/bash
-      set -e
-
-      pip install gradio_client
+    bootstrap: pip install gradio_client
