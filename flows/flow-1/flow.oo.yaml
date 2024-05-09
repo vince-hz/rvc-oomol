@@ -17,6 +17,7 @@ nodes:
           - node_id: 55f6d082-7bd3-41af-a8f4-f43c8c085a50
             output_handle: url
     title: download_raw
+    description: 服务器下载音频资源
   - task: ../../blocks/python_lib_e9f2b5/block.oo.yaml
     node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1
     inputs_from:
@@ -34,6 +35,7 @@ nodes:
           - node_id: 294404e4-36e7-42e1-a0ce-1e7c6a7faaf6
             output_handle: audioDirPath
     title: uvr
+    description: 人声/伴奏 分离
   - task: ../../blocks/python_lib_33d1c5/block.oo.yaml
     node_id: d1c5882b-cd0b-4333-baae-a305ccbdffd4
     inputs_from:
@@ -51,6 +53,7 @@ nodes:
           - node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1
             output_handle: audioDirName
     title: infer
+    description: 人声推理
   - task: ../../blocks/python_lib_896fae/block.oo.yaml
     node_id: 6fae2bdf-07b6-4ea8-8409-e8cfd180cebd
     inputs_from:
@@ -76,6 +79,7 @@ nodes:
           - node_id: f2b55d64-7342-4cb6-9bd4-766bcf7870e1
             output_handle: audioDirName
     title: merge
+    description: 人声伴奏合并
   - task: file::file_writer
     node_id: 81b988d0-0820-4f8b-94ca-4cbbbf5cf13a
     inputs_from:
@@ -95,6 +99,7 @@ nodes:
       - handle: when_file_exists
         cache:
           initial_value: override
+    description: 保存
   - task: file::url_reader
     node_id: 46f2fbf3-70aa-45ac-878d-0a0ab97fb95b
     inputs_from:
@@ -102,6 +107,7 @@ nodes:
         from_node:
           - node_id: 6fae2bdf-07b6-4ea8-8409-e8cfd180cebd
             output_handle: downloadUrl
+    description: 下载
   - task: ../../blocks/typescript_lib_ed55f6/block.oo.yaml
     node_id: 55f6d082-7bd3-41af-a8f4-f43c8c085a50
     inputs_from:
@@ -110,12 +116,14 @@ nodes:
           - node_id: cb3881e9-14f3-4f4a-bf35-939abab5a5b5
             output_handle: binary
     title: upload_r2
+    description: 上传本地内容
   - task: file::file_reader
     node_id: cb3881e9-14f3-4f4a-bf35-939abab5a5b5
     inputs_from:
       - handle: file
         cache:
           initial_value: ""
+    description: 从本地读取歌曲内容，音视频都可
   - task: ../../blocks/typescript_lib_970c52/block.oo.yaml
     node_id: 0c526ba0-687d-46d8-b07e-21193552e4cd
     inputs_from:
@@ -123,3 +131,4 @@ nodes:
         cache:
           initial_value: https://www.youtube.com/watch?v=aaM7qG2ycjk
     title: youtube_input
+    description: 输入 youtube 音乐地址，和本地内容只能二选一
